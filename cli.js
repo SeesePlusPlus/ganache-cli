@@ -43,7 +43,9 @@ if (argv.help || argv['?']) {
   console.log("  --gasPrice/-g <gas price>   (default 20000000000)");
   console.log("  --gasLimit/-l <gas limit>   (default 90000)");
   console.log("");
-  console.log("  --debug       (Output VM opcodes for debugging)");
+  console.log("  --debug          (Output VM opcodes for debugging)");
+  console.log("  --sdb            (Enables hooks for solidity-debugger");
+  console.log("  --sdbPort <port> (Specifiy sdb port)");
   console.log("  --verbose/-v");
   console.log("  --mem         (Only show memory output, not tx history)");
   console.log("");
@@ -99,6 +101,8 @@ var options = {
   port: argv.p || argv.port || "8545",
   hostname: argv.h || argv.hostname,
   debug: argv.debug,
+  sdbEnable: argv.sdb,
+  sdbPort: argv.sdbPort || "8455",
   seed: argv.s || argv.seed,
   mnemonic: argv.m || argv.mnemonic,
   total_accounts: argv.a || argv.accounts,

@@ -49,6 +49,8 @@ Options:
 * `-i` or `--networkId`: Specify the network id the ganache-cli will use to identify itself (defaults to the current time or the network id of the forked blockchain if configured)
 * `--db`: Specify a path to a directory to save the chain database. If a database already exists, ganache-cli will initialize that chain instead of creating a new one.
 * `--debug`: Output VM opcodes for debugging
+* `--sdb`: Enable solidity-debugger (or sdb)
+* `--sdbPort`: Specify sdb port (defaults to 8455)
 * `--mem`: Output ganache-cli memory usage statistics. This replaces normal output.
 
 Special Options:
